@@ -43,189 +43,189 @@ const SONG_GUESS = {
 };
 
 // C2: PIECE TOGETHER THE PIC
-const PUZZLE_PHOTO_URL = 'https://i.ibb.co.com/7NpKd8wZ/Happy-Birthday-20251017-053512-0000.png';
+const PUZZLE_PHOTO_URL = 'https://circular-fuchsia-7fgxlhpbzv.edgeone.app/Happy%20Birthday_20251017_053512_0000.png';
 
 // M1: THE MEMORY VAULT - 36 FOTO DENGAN JUDUL DAN CAPTION (DIURUT DARI PERTAMA SAMPAAI TERAKHIR)
 const MONTHLY_MEMORIES = [
   {
     title: "FOTO KE-1: ADA APA DENGAN CINTA?",
     caption: "[1 of 36] Hayoo.. Siapa yang udah mulai suka di sini?",
-    photoUrl: 'https://i.ibb.co.com/qFkJHVKj/1.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/1.jpg',
   },
   {
     title: "FOTO KE-2: PUJI TUHAN, MENANG!",
     caption: "[2 of 36] Eits- siapa yang kesandung tangga waktu mau foto?",
-    photoUrl: 'https://i.ibb.co.com/MwqQQTs/2.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/2.jpg',
   },
   {
     title: "FOTO KE-3: OUR DATE AT RACCOON CAFE",
     caption: "[3 of 36] Kaget gak tiba-tiba disamperin? :p",
-    photoUrl: 'https://i.ibb.co.com/4gRVPX1f/3.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/3.jpg',
   },
   {
     title: "FOTO KE-4: EDISI JALAN-JALAN KE PARAGON",
     caption: "[4 of 36] Habis itu ada yang foto sama Optimus Prime WKWKWK",
-    photoUrl: 'https://i.ibb.co.com/XxXtZr25/4.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/4.jpg',
   },
   {
     title: "FOTO KE-5: ICIP-ICIP MALL BARU",
     caption: "[5 of 36] Finally ngedate dengan kaos couple! (walau sampai saat ini kaosnya itu mulu..)",
-    photoUrl: 'https://i.ibb.co.com/Qv6LWfK8/5.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/5.jpg',
   },
   {
     title: "FOTO KE-6: MAIN KAGAK, NGEVLOG IYA.",
     caption: "[6 of 36] Gak pernah ngevlog, sekali ngevlog dibikin story berbagai editan :v",
-    photoUrl: 'https://i.ibb.co.com/cK9scRnq/6.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/6.jpg',
   },
   {
     title: "FOTO KE-7: GA JAIMNYA KALO SEPI",
     caption: "[7 of 36] Hasil dari jepretan anak (yang sekarang) jurusan Film dan Televisi",
-    photoUrl: 'https://i.ibb.co.com/zWcHJdgy/7.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/7.jpg',
   },
   {
     title: "FOTO KE-8: DI LUAR PREDIKSI BMKG!",
     caption: "[8 of 36] Siapa sangka tiba-tiba diajak pergi dan udah OTW dijemput? :)",
-    photoUrl: 'https://i.ibb.co.com/LdCMyrBD/8.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/8.jpg',
   },
   {
     title: "FOTO KE-9: FOTO LEGENDARIS",
     caption: "[9 of 36] Ini sih foto kita yang paling 'legend'",
-    photoUrl: 'https://i.ibb.co.com/Jwv4v53k/9.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/9.jpg',
   },
   {
     title: "FOTO KE-10: BBQ NIGHT",
     caption: "[10 of 36] Seneng-seneng sih, tapi sedih ditinggal lulus :'(",
-    photoUrl: 'https://i.ibb.co.com/wr8gQH8X/10.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/10.jpg',
   },
   {
     title: "FOTO KE-11: UNEXPECTED..",
     caption: "[11 of 36] Niatnya graduasi malah reparasi ._.",
-    photoUrl: 'https://i.ibb.co.com/DPZ98G58/11.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/11.png',
   },
   {
     title: "FOTO KE-12: TIBA-TIBA LARI PAGI?!",
     caption: "[12 of 36] Sepertinya ini akan menjadi yang pertama sekaligus terakhir..",
-    photoUrl: 'https://i.ibb.co.com/spsTQkPy/12.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/12.jpg',
   },
   {
     title: "FOTO KE-13: VIP ROOM",
     caption: "[13 of 36] Selesai main PS maunya nobar, beliau malah tidur nyenyak ^^",
-    photoUrl: 'https://i.ibb.co.com/Kz8D2wXj/13.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/13.jpg',
   },
   {
     title: "FOTO KE-14: MCDONALD'S JAGONYA ES KRIM",
     caption: "[14 of 36] Makan es krim dulu biar kuat melawan panasnya Semarang",
-    photoUrl: 'https://i.ibb.co.com/spc8DWMm/14.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/14.jpg',
   },
   {
     title: "FOTO KE-15: HUNTING FOTO",
     caption: "[15 of 36] Baik banget deh mau nemenin pacarnya buat ngerjain tugas xixixi",
-    photoUrl: 'https://i.ibb.co.com/RkhJH8r7/15.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/15.jpg',
   },
   {
     title: "FOTO KE-16: NONTON DRIFT",
     caption: "[16 of 36] Seruu hehehe, mau lagi kok kalau diajak >.<",
-    photoUrl: 'https://i.ibb.co.com/k65shpNR/16.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/16.jpg',
   },
   {
     title: "FOTO KE-17: FIRST TIME MAIN KE RUMAH",
     caption: "[17 of 36] Garasi jadi batas suci, pelan-pelan berprogres ya dek ya",
-    photoUrl: 'https://i.ibb.co.com/5WCRvMtp/17.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/17.jpg',
   },
   {
     title: "FOTO KE-18: SEMUA YANG KAU LAKUKAN IS MAGIC",
     caption: "[18 of 36] Entah apa yang terjadi, si kaku ini tiba-tiba jago berpose..",
-    photoUrl: 'https://i.ibb.co.com/ycpWyGRk/18.webp',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/18.webp',
   },
   {
     title: "FOTO KE-19: PURA-PURA JADI TEMEN SEANGKATAN",
     caption: "[19 of 36] Pura2 jadi temen seangkatan demi tugas 100 foto •_•",
-    photoUrl: 'https://i.ibb.co.com/qMwB0vFJ/19.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/19.jpg',
   },
   {
     title: "FOTO KE-20: DAN YAP, PERPUS LAGI",
     caption: "[20 of 36] Tempat andalan pada masanya, sekarang sudah mulai terlupakan well",
-    photoUrl: 'https://i.ibb.co.com/KjwNK3Yt/20.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/20.jpg',
   },
   {
     title: "FOTO KE-21: PECEL DATE",
     caption: "[21 of 36] Jujur aja telor gorengnya enak euy dimakan sama nasi pecelnya",
-    photoUrl: 'https://i.ibb.co.com/0VRXNvY8/21.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/21.jpg',
   },
   {
     title: "FOTO KE-22: JALAN-JALAN KE PARAGON EDISI TERBARU",
     caption: "[22 of 36] Nah bener kan, kaosnya itu lagi..",
-    photoUrl: 'https://i.ibb.co.com/MDCML11c/22.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/22.jpg',
   },
   {
     title: "FOTO KE-23: GIIAS PERTAMA DI MULADI DOME",
     caption: "[23 of 36] Pertama kali merasakan sensasi naik mobil harga 1 miliar :D",
-    photoUrl: 'https://i.ibb.co.com/s9w32MRz/23.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/23.jpg',
   },
   {
     title: "FOTO KE-24: GAGAL ESTETIK",
     caption: "[24 of 36] Berniat fotbar dengan background langit, tapi kamera berkata lain",
-    photoUrl: 'https://i.ibb.co.com/WpH29gkg/24.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/24.jpg',
   },
   {
     title: "FOTO KE-25: MERRY CHRISTMAS!",
     caption: "[25 of 36] Yeayy, seneng banget deh bisa ke Gereja bareng!",
-    photoUrl: 'https://i.ibb.co.com/M0nYQsh/25.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/25.jpg',
   },
   {
     title: "FOTO KE-26: JENG JENG JENG",
     caption: "[26 of 36] Ini dia foto yang dijadikan PP WA Ooh",
-    photoUrl: 'https://i.ibb.co.com/YFkxV3KR/26.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/26.jpg',
   },
   {
     title: "FOTO KE-27: NAIK JAMUR APUNG",
     caption: "[27 of 36] Bagus kali lah foto-foto kita di jamur apung",
-    photoUrl: 'https://i.ibb.co.com/ZptpYfXG/27.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/27.jpg',
   },
   {
     title: "FOTO KE-28: PERTAMA KALI KE PASAR DUGDERAN",
     caption: "[28 of 36] Pengen street food night date kaya di pasar dugderan lagi :(",
-    photoUrl: 'https://i.ibb.co.com/ycTwt5gv/28.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/28.jpg',
   },
   {
     title: "FOTO KE-29: HAPPY VALENTINE'S DAY!",
     caption: "[29 of 36] Cheese! Ke Gereja bareng lagi!",
-    photoUrl: 'https://i.ibb.co.com/ymkdw85D/29.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/29.jpg',
   },
   {
     title: "FOTO KE-30: NAIK MOBIL, NAIK TURUN TEMBALANG",
     caption: "[30 of 36] Gak jadi ngemall no problem, yang penting jadi drive-thru yuhuu",
-    photoUrl: 'https://i.ibb.co.com/Xr6qh4V8/30.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/30.jpg',
   },
   {
     title: "FOTO KE-31: GANTIAN DP MALL JADI ANDALAN",
     caption: "[31 of 36] Berhasil mendapatkan tempat duduk setelah war dengan miliaran manusia",
-    photoUrl: 'https://i.ibb.co.com/rKbKd6dv/31.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/31.jpg',
   },
   {
     title: "FOTO KE-32: TOURING PERTAMA KE TELOMOYO",
     caption: "[32 of 36] NGL but enak banget makan mi di puncak HAHAHA",
-    photoUrl: 'https://i.ibb.co.com/BSgpJBh/32.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/32.jpg',
   },
   {
     title: "FOTO KE-33: BEST GIFTS",
     caption: "[33 of 36] Terima kasih untuk hadiah-hadiahnya, Ayang!",
-    photoUrl: 'https://i.ibb.co.com/V0NMTJjv/33.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/33.jpg',
   },
   {
     title: "FOTO KE-34: TEBAK DI MANA?",
     caption: "[34 of 36] Tampaknya DP Mall sudah mulai beralih menjadi base camp..",
-    photoUrl: 'https://i.ibb.co.com/Xky6Rzrg/34.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/34.jpg',
   },
   {
     title: "FOTO KE-35: BONDOL GIRLFRIEND ERA",
     caption: "[35 of 36] Suatu hari, pacarmu bertransformasi menjadi bondol",
-    photoUrl: 'https://i.ibb.co.com/pBwxD6jv/35.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/35.jpg',
   },
   {
     title: "FOTO KE-36: MIXUE YANG KE-1964728",
     caption: "[36 of 36] Momen sebelum Mixue tersaingi oleh Momoyo",
-    photoUrl: 'https://i.ibb.co.com/5xhrD0xd/36.jpg',
+    photoUrl: 'https://burning-black-om1a31mbed.edgeone.app/36.jpg',
   },
 ];
 // CORE MESSAGES
@@ -1295,7 +1295,10 @@ const PhotoPuzzleModule = ({ completeModule, setCurrentStep, setShowConfetti }) 
           <p className="text-xl font-extrabold text-white bg-green-700 p-4 rounded-lg shadow-2xl shadow-green-500/50">
             "YOUR PHOTO PUZZLE IS COMPLETED."
           </p>
-          <TerminalButton onClick={() => completeModule('C2_PUZZLE')} className="mt-6" accent="cyan">
+          <TerminalButton onClick={() => {
+            completeModule('C2_PUZZLE');
+            setCurrentStep('HUB');
+          }} className="mt-6" accent="cyan">
             RETURN TO HUB
           </TerminalButton>
         </div>
@@ -1347,6 +1350,7 @@ const TriviaModule = ({ completeModule, setCurrentStep, setShowConfetti }) => {
 
   const handleAcquire = () => {
     completeModule('C3_TRIVIA');
+    setCurrentStep('HUB');
   };
 
   const currentQuestion = TRIVIA_QUESTIONS[currentQ];
@@ -1519,7 +1523,10 @@ const CompassQuestModule = ({ completeModule, setCurrentStep, setShowConfetti })
           <p className="text-xl font-extrabold text-white bg-green-700 p-4 rounded-lg shadow-2xl shadow-green-500/50">
             "VIDEO CHAMBER ACCESS UNLOCKED!"
           </p>
-          <TerminalButton onClick={() => completeModule('C4_COMPASS')} className="mt-6" accent="cyan">
+          <TerminalButton onClick={() => {
+            completeModule('C4_COMPASS');
+            setCurrentStep('HUB');
+          }} className="mt-6" accent="cyan">
             RETURN TO HUB
           </TerminalButton>
         </div>
@@ -1709,7 +1716,10 @@ const SweetestCatchModule = ({ completeModule, setCurrentStep }) => {
       )}
 
       {score >= TARGET_SCORE ? (
-        <TerminalButton onClick={() => completeModule('C5_ARCADE')} accent="cyan" className="pulsing-cyan">
+        <TerminalButton onClick={() => {
+            completeModule('C5_ARCADE');
+            setCurrentStep('HUB');
+          }} accent="cyan" className="pulsing-cyan">
           RETURN TO HUB
         </TerminalButton>
       ) : (
