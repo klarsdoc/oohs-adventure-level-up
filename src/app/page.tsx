@@ -1912,7 +1912,7 @@ const CentralHub = ({ moduleStatus, allChallengesComplete, videoChamberUnlocked,
       </div>
 
       <div className="mb-10">
-        <h3 className="text-xl font-mono-terminal text-accent-orange tracking-wider uppercase mb-4 border-b border-accent-orange pb-2 flex items-center">
+        <h3 className="text-xl font-mono-terminal text-accent-cyan tracking-wider uppercase mb-4 border-b border-accent-cyan pb-2 flex items-center">
           <Zap className="w-5 h-5 mr-2" /> SIMULATION ARENA (5 CHALLENGES)
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
