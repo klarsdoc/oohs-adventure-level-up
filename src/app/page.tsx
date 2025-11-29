@@ -245,9 +245,9 @@ I LOVE YOU MORE THAN WORDS, MOST IN THE WORLD
 NONIK
 `;
 
-const FINAL_SURPRISE_TEXT = 'PAYLOAD DEPLOYED: HAPPY BIRTHDAY, OOH 🥳❤️ SEMOGA DI USIA YANG BARU INI, OOH SELALU DIBERI KESEHATAN, PUMUR YANG PANJANG, REZEKI YANG LANCAR, DAN KEBAHAGIAAN YANG TIDAK ADA HABISNYA. SEMOGA SEMUA MIMPI DAN HARAPAN OOH BISA TERCAPAI SATU PER SATU, LANGKAHNYA SELALU DIMUDAHKAN, DAN SELALU DIKELILINGI ORANG-ORANG YANG BAIK SAMA OOH. NONIK SANGAT BERSYUKUR KARENA BISA JADI PASANGAN OOH, LIHAT SENYUM OOH, DAN IKUT MENEMANI SETIAP PROSES YANG OOH JALANI. SEMOGA HARI INI PENUH MOMEN INDAH DAN DOA BAIK YANG MENGALIR BUAT OOH. NONIK AKAN SELALU ADA BUAT OOH DI SETIAP SUKA, DUKA, DAN PERJALANAN PANJANG KITA KE DEPAN. I LOVE U SO MUCH, OOH 🥰 KADO UTAMAMU ADALAH: X';
+const FINAL_SURPRISE_TEXT = 'PAYLOAD DEPLOYED: HAPPY BIRTHDAY, OOH 🥳❤️ SEMOGA DI USIA YANG BARU INI, OOH SELALU DIBERI KESEHATAN, UMUR YANG PANJANG, REZEKI YANG LANCAR, DAN KEBAHAGIAAN YANG TIDAK ADA HABISNYA. SEMOGA SEMUA MIMPI DAN HARAPAN OOH BISA TERCAPAI SATU PER SATU, LANGKAHNYA SELALU DIMUDAHKAN, DAN SELALU DIKELILINGI ORANG-ORANG YANG BAIK SAMA OOH. NONIK SANGAT BERSYUKUR KARENA BISA JADI PASANGAN OOH, LIHAT SENYUM OOH, DAN IKUT MENEMANI SETIAP PROSES YANG OOH JALANI. SEMOGA HARI INI PENUH MOMEN INDAH DAN DOA BAIK YANG MENGALIR BUAT OOH. NONIK AKAN SELALU ADA BUAT OOH DI SETIAP SUKA, DUKA, DAN PERJALANAN PANJANG KITA KE DEPAN. I LOVE U SO MUCH, OOH 🥰 KADO UTAMAMU ADALAH: X';
 
-const VIDEO_URL_MOCK = 'https://www.w3schools.com/html/mov_bbb.mp4';
+const VIDEO_URL_MOCK = 'https://hurt-red-q2169uba0g-f3pcge3nm9.edgeone.app/Its%20Your%20Birthday%20Today.mp4';
 
 // --- UI UTILITY COMPONENTS ---
 const TailwindStyle = () => (
@@ -790,8 +790,9 @@ const GreetingView = ({ setStep }) => {
 
   const handleScroll = () => {
     if (letterRef.current) {
-      const { scrollTop, scrollHeight, clientHeight } = letterRef.current;
-      if (scrollHeight - scrollTop <= clientHeight + 10) {
+      const { scrollTop } = letterRef.current;
+      // Set scrolled to true when user scrolls more than 10px
+      if (scrollTop > 10 && !scrolled) {
         setScrolled(true);
       }
     }
@@ -804,14 +805,23 @@ const GreetingView = ({ setStep }) => {
           PERSONAL GREETING CARD: DECRYPTED
         </h1>
 
-        <div
-          ref={letterRef}
-          onScroll={handleScroll}
-          className="h-96 overflow-y-auto p-4 bg-black/50 rounded-lg text-white/90 font-mono-terminal text-sm leading-relaxed"
-        >
-          <pre className="whitespace-pre-wrap">{INITIAL_GREETING_MESSAGE}</pre>
+        <div className="relative">
+          <div
+            ref={letterRef}
+            onScroll={handleScroll}
+            className="h-96 overflow-y-auto p-4 bg-black/50 rounded-lg text-white/90 font-mono-terminal text-sm leading-relaxed"
+          >
+            <pre className="whitespace-pre-wrap">{INITIAL_GREETING_MESSAGE}</pre>
+          </div>
+          
+          {/* Vignette effect at bottom - only visible when scroll text is visible */}
           {!scrolled && (
-            <div className="text-center text-accent-orange pt-4 animate-pulse">
+            <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/80 via-black/50 via-black/30 to-transparent pointer-events-none"></div>
+          )}
+          
+          {/* Floating indicator - only visible when not scrolled */}
+          {!scrolled && (
+            <div className="absolute bottom-4 left-0 right-0 text-center text-accent-orange font-mono-terminal text-sm animate-pulse">
               [SCROLL DOWN TO READ FULL MESSAGE]
             </div>
           )}
@@ -1521,7 +1531,7 @@ const CompassQuestModule = ({ completeModule, setCurrentStep, setShowConfetti })
             QUEST COMPLETE!
           </div>
           <p className="text-xl font-extrabold text-white bg-green-700 p-4 rounded-lg shadow-2xl shadow-green-500/50">
-            "VIDEO CHAMBER ACCESS UNLOCKED!"
+            "YOU HAVE A GOOD MEMORY!"
           </p>
           <TerminalButton onClick={() => {
             completeModule('C4_COMPASS');
@@ -1736,42 +1746,12 @@ const VideoChamberModule = ({ completeModule, setIsVideoPlaying, setCurrentStep 
   const [selectedVideo, setSelectedVideo] = useState(null);
   const videoRef = useRef(null);
   
-  // Sample videos with different sources for testing
+  // Single compiled video for the commemoration feed
   const videoThumbnails = [
     {
       id: 1,
-      title: "MESSAGE FEED 1",
-      thumbnail: "https://placehold.co/150x100/1E1E30/FF9900?text=VIDEO+FEED+1",
-      videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
-    },
-    {
-      id: 2,
-      title: "MESSAGE FEED 2",
-      thumbnail: "https://placehold.co/150x100/1E1E30/00F0FF?text=VIDEO+FEED+2",
-      videoUrl: "https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4"
-    },
-    {
-      id: 3,
-      title: "MESSAGE FEED 3",
-      thumbnail: "https://placehold.co/150x100/1E1E30/FF006E?text=VIDEO+FEED+3",
-      videoUrl: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4"
-    },
-    {
-      id: 4,
-      title: "MESSAGE FEED 4",
-      thumbnail: "https://placehold.co/150x100/1E1E30/FFBE0B?text=VIDEO+FEED+4",
-      videoUrl: "https://www.w3schools.com/html/movie.mp4"
-    },
-    {
-      id: 5,
-      title: "MESSAGE FEED 5",
-      thumbnail: "https://placehold.co/150x100/1E1E30/3A86FF?text=VIDEO+FEED+5",
-      videoUrl: "https://sample-videos.com/video321/mp4/360/big_buck_bunny_360p_1mb.mp4"
-    },
-    {
-      id: 6,
-      title: "MESSAGE FEED 6",
-      thumbnail: "https://placehold.co/150x100/1E1E30/8338EC?text=VIDEO+FEED+6",
+      title: "THE COMMEMORATION FEED",
+      thumbnail: "https://placehold.co/150x100/1E1E30/FF9900?text=COMMEMORATION+FEED",
       videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
     }
   ];
@@ -1804,14 +1784,15 @@ const VideoChamberModule = ({ completeModule, setIsVideoPlaying, setCurrentStep 
       </h1>
       <p className="text-gray-400 text-sm mb-6 text-center uppercase">SELECT A MEMORY FEED TO PLAY</p>
       
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
-        {videoThumbnails.map((video) => (
+<div className="mb-6">
+        <div className="w-full">
+          {videoThumbnails.map((video) => (
           <div
             key={video.id}
             onClick={() => handleVideoClick(video)}
-            className="cursor-pointer group relative overflow-hidden rounded-lg border-2 border-accent-cyan/30 hover:border-accent-cyan transition-all duration-300 bg-gray-900/50 hover:bg-gray-900/70"
+            className="cursor-pointer group relative overflow-hidden rounded-lg border-2 border-accent-cyan/30 hover:border-accent-cyan transition-all duration-300 bg-gray-900/50 hover:bg-gray-900/70 w-full"
           >
-            <div className="aspect-video relative">
+            <div className="aspect-video relative w-full">
               <img
                 src={video.thumbnail}
                 alt={video.title}
@@ -1826,6 +1807,7 @@ const VideoChamberModule = ({ completeModule, setIsVideoPlaying, setCurrentStep 
             <p className="text-xs font-mono-terminal text-accent-cyan p-2 text-center uppercase">{video.title}</p>
           </div>
         ))}
+        </div>
       </div>
       
       <TerminalButton onClick={() => {
@@ -1884,7 +1866,7 @@ const VideoChamberModule = ({ completeModule, setIsVideoPlaying, setCurrentStep 
 };
 
 // --- PHASE 4: MISSION HUB ---
-const CentralHub = ({ moduleStatus, allChallengesComplete, videoChamberUnlocked, setStep }) => {
+const CentralHub = ({ moduleStatus, allChallengesComplete, videoChamberUnlocked, challengesUnlocked, finaleUnlocked, setStep }) => {
   const challengesCompleteCount = ['C1_SONG', 'C2_PUZZLE', 'C3_TRIVIA', 'C4_COMPASS', 'C5_ARCADE']
     .filter(key => moduleStatus[key] === 'COMPLETE').length;
 
@@ -1934,17 +1916,17 @@ const CentralHub = ({ moduleStatus, allChallengesComplete, videoChamberUnlocked,
           <Zap className="w-5 h-5 mr-2" /> SIMULATION ARENA (5 CHALLENGES)
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <ModuleCard title="C1: THE SOUNDTRACK OF US" status={getModuleStatus('C1_SONG')} icon={Music} onClick={() => setStep('C1_SONG')} />
-          <ModuleCard title="C2: PIECE TOGETHER THE PIC (3x3 GRID)" status={getModuleStatus('C2_PUZZLE')} icon={Puzzle} onClick={() => setStep('C2_PUZZLE')} />
-          <ModuleCard title="C3: OUR JOURNEY TRIVIA (10 QUESTIONS)" status={getModuleStatus('C3_TRIVIA')} icon={Zap} onClick={() => setStep('C3_TRIVIA')} />
-          <ModuleCard title="C4: GOLDEN COMPASS QUEST (3 STEP)" status={getModuleStatus('C4_COMPASS')} icon={Map} onClick={() => setStep('C4_COMPASS')} />
-          <ModuleCard title="C5: SWEETEST CATCH (ARCADE GAME)" status={getModuleStatus('C5_ARCADE')} icon={Heart} onClick={() => setStep('C5_ARCADE')} />
+          <ModuleCard title="C1: THE SOUNDTRACK OF US" status={getModuleStatus('C1_SONG')} icon={Music} onClick={() => setStep('C1_SONG')} isLocked={!challengesUnlocked} />
+          <ModuleCard title="C2: PIECE TOGETHER THE PIC (3x3 GRID)" status={getModuleStatus('C2_PUZZLE')} icon={Puzzle} onClick={() => setStep('C2_PUZZLE')} isLocked={!challengesUnlocked} />
+          <ModuleCard title="C3: OUR JOURNEY TRIVIA (10 QUESTIONS)" status={getModuleStatus('C3_TRIVIA')} icon={Zap} onClick={() => setStep('C3_TRIVIA')} isLocked={!challengesUnlocked} />
+          <ModuleCard title="C4: GOLDEN COMPASS QUEST (3 STEP)" status={getModuleStatus('C4_COMPASS')} icon={Map} onClick={() => setStep('C4_COMPASS')} isLocked={!challengesUnlocked} />
+          <ModuleCard title="C5: SWEETEST CATCH (ARCADE GAME)" status={getModuleStatus('C5_ARCADE')} icon={Heart} onClick={() => setStep('C5_ARCADE')} isLocked={!challengesUnlocked} />
         </div>
       </div>
 
        <div className="mb-28"> 
         <h3 className="text-xl font-mono-terminal text-accent-cyan tracking-wider uppercase mb-4 border-b border-accent-cyan pb-2 flex items-center">
-          <Video className="w-5 h-5 mr-2" /> REWARD CHAMBER (FEEDS TERKUNCI)
+          <Video className="w-5 h-5 mr-2" /> REWARD CHAMBER (SPECIALLY MADE FOR YOU)
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <ModuleCard
@@ -1960,12 +1942,12 @@ const CentralHub = ({ moduleStatus, allChallengesComplete, videoChamberUnlocked,
 
       <div className="fixed bottom-0 left-0 right-0 p-4 bg-primary-dark border-t border-accent-orange/50 shadow-inner shadow-accent-orange-light">
         <TerminalButton
-          onClick={() => allChallengesComplete && setStep('FINALE')}
-          disabled={!allChallengesComplete}
-          accent={allChallengesComplete ? 'orange' : 'cyan'}
-          className={`w-full !py-4 text-lg ${allChallengesComplete ? 'pulsing-orange' : ''}`}
+          onClick={() => finaleUnlocked && setStep('FINALE')}
+          disabled={!finaleUnlocked}
+          accent={finaleUnlocked ? 'orange' : 'cyan'}
+          className={`w-full !py-4 text-lg ${finaleUnlocked ? 'pulsing-orange' : ''}`}
         >
-          {allChallengesComplete ? 'REVEAL ULTIMATE SURPRISE (PAYLOAD DEPLOYMENT)' : `FINAL PAYLOAD LOCKED (${challengesCompleteCount}/${totalChallenges})`}
+          {finaleUnlocked ? 'REVEAL ULTIMATE SURPRISE (PAYLOAD DEPLOYMENT)' : `FINAL PAYLOAD LOCKED (${challengesCompleteCount}/${totalChallenges} CHALLENGES)`}
         </TerminalButton>
       </div>
     </div>
@@ -2062,9 +2044,12 @@ const App = () => {
     }
   }, [moduleStatus, setCurrentStep]);
 
-  const videoChamberUnlocked = moduleStatus.C4_COMPASS === 'COMPLETE';
+  const videoChamberUnlocked = ['C1_SONG', 'C2_PUZZLE', 'C3_TRIVIA', 'C4_COMPASS', 'C5_ARCADE']
+    .every(key => moduleStatus[key] === 'COMPLETE');
   const allChallengesComplete = ['C1_SONG', 'C2_PUZZLE', 'C3_TRIVIA', 'C4_COMPASS', 'C5_ARCADE']
     .every(key => moduleStatus[key] === 'COMPLETE');
+  const challengesUnlocked = moduleStatus.MEMORY_VAULT === 'COMPLETE';
+  const finaleUnlocked = videoChamberUnlocked && moduleStatus.VIDEO_CHAMBER === 'COMPLETE';
 
   // Show congratulations when returning to hub after completing a module
   useEffect(() => {
@@ -2092,12 +2077,14 @@ const App = () => {
         return <VideoView setStep={setCurrentStep} setIsVideoPlaying={setIsVideoPlaying} />;
       case 'GREETING':
         return <GreetingView setStep={setCurrentStep} />;
-      case 'HUB':
+  case 'HUB':
         return (
           <CentralHub
             moduleStatus={moduleStatus}
             allChallengesComplete={allChallengesComplete}
             videoChamberUnlocked={videoChamberUnlocked}
+            challengesUnlocked={challengesUnlocked}
+            finaleUnlocked={finaleUnlocked}
             setStep={setCurrentStep}
           />
         );
@@ -2119,10 +2106,10 @@ const App = () => {
         }
         return <div className="text-accent-orange font-mono-terminal text-center pt-20">ACCESS DENIED. COMPLETE C4 FIRST.</div>;
       case 'FINALE':
-        if (allChallengesComplete) {
+        if (finaleUnlocked) {
           return <FinaleView setStep={setCurrentStep} />;
         }
-        return <div className="text-accent-orange font-mono-terminal text-center pt-20">ULTIMATE REWARD LOCKED. FINISH ALL CHALLENGES.</div>;
+ return <div className="text-accent-orange font-mono-terminal text-center pt-20">ULTIMATE REWARD LOCKED. COMPLETE ALL CHALLENGES.</div>;
       default:
         return <div className="text-red-500 font-mono-terminal text-center pt-20">SYSTEM ERROR: UNKNOWN STEP.</div>;
     }
