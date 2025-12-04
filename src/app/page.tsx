@@ -1752,7 +1752,7 @@ const VideoChamberModule = ({ completeModule, setIsVideoPlaying, setCurrentStep 
       id: 1,
       title: "THE COMMEMORATION FEED",
       thumbnail: "https://placehold.co/150x100/1E1E30/FF9900?text=COMMEMORATION+FEED",
-      videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
+      videoUrl: "https://joyous-jade-xpgucjq8cq-82offpd8qr.edgeone.app/Happy%20Birthday%20To%20You%20_3.mp4"
     }
   ];
   
